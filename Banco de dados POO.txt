@@ -1,0 +1,41 @@
+create database biblioteca;
+
+use biblioteca;
+
+create table funcionario(idFuncionario integer not null primary key auto_increment,
+    cpfFuncionario varchar(11) not null unique, nomeFuncionario varchar(50) not null unique,
+    emailFuncionario varchar(50) not null unique, telefoneFuncionario varchar(15) not null unique);
+
+create table cliente(idCliente integer not null primary key unique auto_increment,
+    nomeCliente varchar(50) not null unique, emailCliente varchar(50) not null unique,
+    telefoneCliente varchar(15) not null unique, cpfCliente varchar(11));
+
+create table livros(idLivros integer not null primary key auto_increment,
+    nomeLivro varchar(50) not null unique, quantLivro varchar(2) not null, autorLivro varchar(50) not null,
+    editoraLivro varchar(30) not null, precoLivro varchar(10) not null,
+    categoriaLivro varchar(20) not null);
+
+insert into cliente(nomeCliente, emailCliente, telefoneCliente, cpfCliente)
+values
+( "Rafael Almeida dos Santos", "rafaelalmeida@gmail.com", 11901939489, "12345678910");
+
+insert into cliente(nomeCliente, emailCliente, telefoneCliente, cpfCliente)
+values
+( "sdqdwaqed", "rsqdwedadwqesdadqweasd", "156154616", "134651669");
+
+insert into funcionario(cpfFuncionario, nomeFuncionario, emailFuncionario, telefoneFuncionario)
+values
+("09128394101", "Carlos Seixas", "Carlitos@gmail.com", "12345678910");
+
+insert into funcionario(cpfFuncionario, nomeFuncionario, emailFuncionario, telefoneFuncionario)
+values
+("12457836910", "Lucas Bezerra", "BizaSenpai@gmail.com", "98765432110");
+
+insert into livros(nomeLivro, quantLivro, autorLivro, editoraLivro, precoLivro, categoriaLivro)
+values
+("Percy Jackson e o ladrao de raios", 3, "Rick Riordan", "Editora Intrinseca", 42.90, "Fantasia");
+
+insert into livros(nomeLivro, quantLivro, autorLivro, editoraLivro, precoLivro, categoriaLivro)
+values
+("dashduwhudhusaud", 7, "dasdqdsa", "eqdwsaeqwdsa", 39.99, "Mitologia");
+
